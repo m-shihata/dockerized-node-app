@@ -58,7 +58,7 @@ mongoose
 // Routes
 app.get('/', (req, res) => {
   redisClient.set('name', 'John Doe from Redis');
-  res.send('Hello World!');
+  res.send('Hello World test!');
 });
 
 app.get('/name', async (req, res) => {
