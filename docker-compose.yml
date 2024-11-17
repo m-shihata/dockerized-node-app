@@ -3,6 +3,7 @@ version: '3'
 services:
   node-app:
     container_name: express-node-app-container
+    image: mushihata/node-app # This is the image name from dockerhub
     ports:
       - '4000:4000'
     env_file:
