@@ -1,7 +1,7 @@
-FROM node:lts as base
+FROM node:lts AS base
 
 
-FROM base as development
+FROM base AS development
 
 WORKDIR /app
 COPY package.json .
@@ -11,7 +11,7 @@ EXPOSE 4000
 CMD ["npm", "run", "dev"]
 
 
-FROM base as production
+FROM base AS production
 
 WORKDIR /app
 COPY package.json .
