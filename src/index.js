@@ -70,5 +70,6 @@ app.get('/name', async (req, res) => {
 app.listen(port, () => {
   console.log('Server is running on port', port);
   console.log('Press Ctrl+C to quit.');
-  console.log(`Open http://localhost:${port} in your browser.`);
+  if (process.env.NODE_ENV === 'development')
+    console.log(`Open http://localhost:${port} in your browser.`);
 });
